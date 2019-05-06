@@ -1,24 +1,24 @@
 import java.util.ArrayList;
 
 public class UserOfInsertionSort {
-    private static List_iAS list;
+    private static ArrayList<String> list;
     private static InsertionSort insertionSort;
 
     public static void main (String[] commandLine){
-	list = new List_iAS();
+	list = new ArrayList<String>();
 	insertionSort = new InsertionSort();
 
 	System.out.println();
-	list.add(3);
-	list.add(6);
-	list.add(8);
-	list.add(4);
-	list.add(8);
-	list.add(5);
-	list.add(6);
-	list.add(2);
-	list.add(4);
-	list.add(7);
+	list.add("D");
+	list.add("D");
+	list.add("Y");
+	list.add("Q");
+	list.add("J");
+	list.add("B");
+	list.add("O");
+	list.add("K");
+	list.add("L");
+	list.add("Z");
 	// for (int counter = 0; counter < 10; counter++)
 	//     list.add((int)(Math.random() * 10));
         System.out.println( "sample list: " + list

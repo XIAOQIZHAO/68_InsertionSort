@@ -1,13 +1,14 @@
+import java.util.ArrayList;
 
 public class InsertionSort {
 
     
-    public int insert1( List_iAS list, int alreadyInserted){
-	int valueToInsert = list.get(alreadyInserted);
+    public String insert1( ArrayList<String> list, int alreadyInserted){
+	String valueToInsert = list.get(alreadyInserted);
 	for (int indexToCompare = alreadyInserted - 1;
 	     indexToCompare >= 0;
 	     indexToCompare--){
-	    if (valueToInsert >= list.get(indexToCompare)){
+	    if (valueToInsert.compareTo( list.get(indexToCompare)) >= 0){
 		drop(list, indexToCompare + 1, valueToInsert);
 		indexToCompare = -1;
 		//get out of loop after dropping current value
@@ -18,18 +19,18 @@ public class InsertionSort {
 	return valueToInsert;
     }
 
-    public int drop(List_iAS list, int index, int value){
+    public String drop( ArrayList<String> list, int index, String value){
 	list.set(index, value);
 	return value;
     }
     
-    public int shift(List_iAS list, int index){
-	int oldValue = list.get(index);
+    public String shift(ArrayList<String> list, int index){
+	String oldValue = list.get(index);
 	list.set(index, list.set(index + 1, oldValue));
 	return oldValue;
     }
     
-    public void insertionSort( List_iAS list){
+    public void insertionSort( ArrayList<String> list){
 	for (int numSorted = 1; numSorted < list.size(); numSorted++){
 	    insert1(list, numSorted);
 	    // // for debugging
